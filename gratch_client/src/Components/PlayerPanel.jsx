@@ -52,7 +52,7 @@ const PlayerPanel = ({ io, roomId }) => {
   };
 
   return (
-    <div className="w-full   h-svh bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+    <div className="w-full   h-screen bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
       <div className=" m-2 mb-0">
         <input
           onChange={handleChange}

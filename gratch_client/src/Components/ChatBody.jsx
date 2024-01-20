@@ -2,7 +2,7 @@ import React from "react";
 
 const ChatBody = ({ messages, lastMessageRef }) => {
   return (
-    <div className=" w-full bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  h-128  shadow-lg overflow-y-scroll   ">
+    <div className=" w-full bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  h-full  shadow-lg overflow-y-scroll   ">
       <div></div>
       <div>
         <Messageboard messages={messages} />

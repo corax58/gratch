@@ -59,7 +59,7 @@ const Room = () => {
           <div></div>
         </div>
       </div>
-      <img src={background} alt="" className="h-screen w-screen static" />
+      <img src={background} alt="" className="h-full w-full static" />
     </div>
   );
 };
