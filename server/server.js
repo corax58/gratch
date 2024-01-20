@@ -6,13 +6,16 @@ const port = 4000;
 const http = require("http").Server(app);
 const socket = require("socket.io");
 
+console.log('hellooo');
 const socketIO = socket(http, {
   cors: {
     origin: "http://localhost:5173",
   },
 });
 socketIO.on("connection", (socket) => {
+  
   //sends the message to all the users on the server
+  console.log(socket.id + ' connected');
   socket.on("message", (data) => {
     socketIO.to(data.roomId).emit("messageResponse", data);
   });
