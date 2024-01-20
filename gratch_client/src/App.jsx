@@ -8,7 +8,8 @@ import LoginPage from "./Pages/LoginPage";
 import Room from "./Pages/Room";
 
 import socket from "socket.io-client";
-const io = socket.connect("http://localhost:4000");
+const serverUrl = import.meta.env.REACT_APP_SERVER_URL;
+const io = socket.connect(serverUrl);
 
 function App() {
   return (
