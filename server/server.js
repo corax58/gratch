@@ -9,7 +9,8 @@ const socket = require("socket.io");
 console.log('hellooo');
 const socketIO = socket(http, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: true,
+    credentials: true
   },
 });
 socketIO.on("connection", (socket) => {
