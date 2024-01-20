@@ -2,17 +2,21 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-const port = 4000;
+const port = 10000;
 const http = require("http").Server(app);
 const socket = require("socket.io");
 
+console.log('hellooo');
 const socketIO = socket(http, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: true,
+    credentials: true
   },
 });
 socketIO.on("connection", (socket) => {
+  
   //sends the message to all the users on the server
+  console.log(socket.id + ' connected');
   socket.on("message", (data) => {
     socketIO.to(data.roomId).emit("messageResponse", data);
   });

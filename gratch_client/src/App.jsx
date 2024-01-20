@@ -9,7 +9,6 @@ import Room from "./Pages/Room";
 
 import socket from "socket.io-client";
 const serverUrl = import.meta.env.VITE_SERVER_URL;
-
 const io = socket.connect(serverUrl);
 
 function App() {
