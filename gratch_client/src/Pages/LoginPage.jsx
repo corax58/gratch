@@ -32,7 +32,7 @@ const LoginPage = () => {
           </form>
         </div>
       </div>
-      <img src={background} alt="" className="h-full w-full static" />
+      <img src={background} alt="" className="h-screen w-screen static" />
     </div>
   );
 };
