@@ -22,7 +22,7 @@ const Room = () => {
     <div className="h-screen w-screen relative">
       <div className=" absolute  text-center w-full">
         <div className="flex h-screen">
-          <div className=" h-96 w-max m-auto    pt-24 flex flex-row ">
+          <div className="  rounded-lg     h-96 w-max m-auto    pt-24 flex flex-row ">
             {roomInput ? (
               <form action="" className="flex flex-col" onSubmit={handleSubmit}>
                 <span className="text-white font-bold ">Room Id:</span>
@@ -40,7 +40,7 @@ const Room = () => {
               </form>
             ) : (
               <div
-                className=" w-40  m-10 h-40 flex justify-center  items-center bg-indigo-500 rounded-xl hover:bg-indigo-700 transition-colors cursor-pointer"
+                className=" w-40  m-10 h-40 flex justify-center  items-center bg-primary rounded-xl hover:bg-slate-900 transition-colors cursor-pointer"
                 onClick={handleCreateRoom}
               >
                 <span className=" text-4xl font-black font-serif text-white">
@@ -49,7 +49,7 @@ const Room = () => {
               </div>
             )}
 
-            <div className=" w-40  m-10 h-40 flex justify-center  items-center bg-indigo-500 rounded-xl hover:bg-indigo-700 transition-colors cursor-pointer">
+            <div className=" w-40  m-10 h-40 flex justify-center  items-center bg-primary rounded-xl hover:bg-slate-900 transition-colors cursor-pointer">
               <span
                 className=" text-4xl font-black font-serif text-white"
                 onClick={() => setRoomInput(!roomInput)}
@@ -61,7 +61,9 @@ const Room = () => {
           </div>
         </div>
       </div>
-      <img src={background} alt="" className="h-full w-full static" />
+      <div className=" h-full w-full absolute -z-50">
+        <img src={background} alt="" className="h-full w-full object-cover" />
+      </div>
     </div>
   );
 };

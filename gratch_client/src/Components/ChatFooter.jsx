@@ -18,7 +18,7 @@ const ChatFooter = ({ io, roomId }) => {
     setMessage("");
   };
   return (
-    <div className=" shadow-xl border-t-2 border-black w-full bg-bluee border-b-1 pb-2 ">
+    <div className=" shadow-xl border-t-2 border-black w-full bg-slate-900 border-b-1 pb-2 ">
       <div>
         <form
           action=""

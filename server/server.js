@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-const port = 10000;
+const port = 4000;
 const http = require("http").Server(app);
 const socket = require("socket.io");
 
@@ -26,6 +26,7 @@ socketIO.on("connection", (socket) => {
   });
   socket.on("join", (data) => {
     socket.join(data.roomId);
+    console.log(data.roomId);
   });
 
   socket.on("disconnect", () => {});

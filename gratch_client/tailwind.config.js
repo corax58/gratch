@@ -7,12 +7,10 @@ export default {
         128: "81vh",
       },
       colors: {
-        primary: "#252731",
+        primary: "#121D31",
         secondary: "#2D2E38",
         third: "#313341",
         bluee: "#230D3C",
-        perpl: "#0B213B",
-        perpeel: "#9C5FAF",
       },
       backgroundImage: {
         synthwave: "url('./src/assets/loginBackground.jpg')",

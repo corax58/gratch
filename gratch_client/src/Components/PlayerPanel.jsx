@@ -52,12 +52,12 @@ const PlayerPanel = ({ io, roomId }) => {
   };
 
   return (
-    <div className="w-full   h-screen bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+    <div className="w-full   h-screen bg-slate-800">
       <div className=" m-2 mb-0">
         <input
           onChange={handleChange}
           type="file"
-          className="text-sm text-stone-500 
+          className="text-sm text-stone-500  
    file:mr-5 file:py-1 file:px-3 file:border-[1px]
     file:font-medium
    file:bg-slate-500 file:text-white
@@ -66,9 +66,8 @@ const PlayerPanel = ({ io, roomId }) => {
         />
         <span className="font-bold text-white m-5">Room: {roomId}</span>
       </div>
-
-      <div className="p-10 pb-5">
-        <div className=" shadow-2xl border-4 border-black ">
+      <div className="p-4   h-3/4">
+        <div className=" shadow-2xl border-4 bg-black border-black w-full h-full ">
           <ReactPlayer
             playing={playing}
             url={src}
@@ -81,31 +80,42 @@ const PlayerPanel = ({ io, roomId }) => {
             onSeek={handleSeek}
           />
         </div>
-      </div>
-      <div className=" w-max h-max  ml-10">
-        <p className=" text-white font-extrabold m-1">Seek safe</p>
-        <button
-          className={
-            "w-14 h-10 " +
-            (seekSafe ? "bg-green-500" : "bg-red-500") +
-            " text-white font-bold  rounded-xl  shadow-xl"
-          }
-          onClick={() => setSeekSafe(!seekSafe)}
-        >
-          {seekSafe ? "ON" : "OFF"}
-        </button>
-      </div>
-      <div
-        className=" w-52 h-max transition duration-1000 ease-out
-       bg-perpeel ml-10 m-2 flex flex-col p-2 text-white rounded-xl border-2 overflow-hidden"
-      >
-        <span className=" ml-auto mr-auto underline font-extrabold">
-          Notice
-        </span>
-        <p className=" text-wrap text-justify font-semibold">
-          Before skipping to a particular moment make sure the Seek Safe is off
-          to sync the changes to other users
-        </p>
+      </div>{" "}
+      <div className=" ">
+        <div className=" w-max h-max  ml-10">
+          <div className="flex items-center">
+            <p className=" text-white font-extrabold m-1">Seek safe </p>
+            <div className="relative group z-0">
+              <div className="p-px bg-primary size-4 text-slate-100 border-slate-100 border rounded-full flex items-center justify-center text-xs font-bold">
+                i
+              </div>
+              <div
+                className="absolute w-96 py-1 h-max flex scale-0 group-hover:scale-100 transition-all ease-in-out duration-300 origin-top-left
+       bg-slate-900   flex-col p-2 text-white font-thin rounded-xl border-slate-600 border "
+              >
+                <span className=" ml-auto mr-auto underline font-semibold">
+                  Notice
+                </span>
+                <p className=" text-wrap text-justify font-light">
+                  Before skipping to a particular moment make sure the Seek Safe
+                  is off to sync the changes to other users
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            className={
+              "w-14 h-10 " +
+              (seekSafe
+                ? "bg-slate-500 hover:bg-slate-600"
+                : "bg-red-500 hover:bg-red-600") +
+              " text-white font-bold  rounded  shadow-xl"
+            }
+            onClick={() => setSeekSafe(!seekSafe)}
+          >
+            {seekSafe ? "ON" : "OFF"}
+          </button>
+        </div>
       </div>
     </div>
   );

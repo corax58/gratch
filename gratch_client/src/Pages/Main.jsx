@@ -11,7 +11,7 @@ const Main = ({ io }) => {
   });
   return (
     <div className="flex flex-row bg-white">
-      <PlayerPanel io={io} roomId={roomId}></PlayerPanel>
+      <PlayerPanel io={io} roomId={roomId} />
       <ChatPanel io={io} roomId={roomId} />
     </div>
   );

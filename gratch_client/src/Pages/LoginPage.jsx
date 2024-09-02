@@ -13,9 +13,16 @@ const LoginPage = () => {
   };
   return (
     <div className="h-screen w-screen relative">
-      <div className=" absolute h-full text-center w-full ">
+      <div className=" absolute h-screen w-screen bg-green-100">
+        <img
+          src={background}
+          alt=""
+          className="  h-full w-full  object-cover"
+        />
+      </div>
+      <div className=" flex h-full text-center w-full ">
         <div className=" h-full w-full flex items-center">
-          <div className=" h-96 w-96 m-auto    pt-24 ">
+          <div className=" h-96 w-96 m-auto  z-40 px-4 rounded-xl   pt-24 ">
             <form action="" className="flex flex-col " onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -25,16 +32,15 @@ const LoginPage = () => {
               />
               <button
                 className={
-                  " bg-pink-600 h-12  w-44 m-auto rounded-xl text-2xl  text-white font-semibold    shadow-pink-700 shadow-2xl mt-12"
+                  " bg-primary h-12 z-50  w-max px-8 m-auto rounded-xl text-2xl  text-white font-semibold    shadow-pink-700 shadow-2xl mt-12"
                 }
               >
-                LOGIN
+                Start
               </button>
             </form>
           </div>
         </div>
       </div>
-      <img src={background} alt="" className=" h-screen w-screen static" />
     </div>
   );
 };

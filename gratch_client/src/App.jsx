@@ -15,6 +15,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <div className="h-full w-full bg-red-700 absolute md:hidden z-50">
+          <div className="h-full w-full bg-primary text-white  font-bold flex justify-center text-center items-center">
+            <p>This site only works on Tablet and Desktop ☹</p>
+          </div>
+        </div>
         <Routes>
           <Route path="/" element={<LoginPage />}></Route>
           <Route path="/main/:roomId" element={<Main io={io} />}></Route>
